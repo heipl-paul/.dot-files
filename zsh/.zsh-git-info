@@ -4,14 +4,13 @@
 
 autoload -Uz compinit && compinit # This is zsh auto complete for git
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
-fpath=(~/.dot-files/zsh $fpath)
+fpath=(. $fpath)
 
 # Load Git Branch Info
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWCOLORHINTS=true
-source ~/.dot-files/zsh/.git-prompt.sh
 
 ###### NOT CURRENTLY USING ZSH VCS INFO, BELOW IS AN EXAMPLE OF HOW IT WOULD WORK
 

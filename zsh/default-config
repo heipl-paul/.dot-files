@@ -1,3 +1,4 @@
 source ./.alias
 source ./.prompt
 source ./.zsh-git-info
+source ./.git-prompt.sh

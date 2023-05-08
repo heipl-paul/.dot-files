@@ -2,8 +2,8 @@
 ## Git AutoComplete ##
 ######################
 
-if [ -f ~/.dot-files/bash/.git-completion.bash ]; then
-  . ~/.dot-files/bash/.git-completion.bash
+if [ -f ./.git-completion.bash ]; then
+  . ./.git-completion.bash
 fi
 
 ###########

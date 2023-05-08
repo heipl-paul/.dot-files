@@ -2,6 +2,8 @@
 ## Human readable local variables for PS1 ##
 ############################################
 
+source "$(dirname "$0")/.git-prompt.sh"
+
 # COLORS
 PS_COLOR_="%F{"
 

@@ -1,4 +1,3 @@
 source "$(dirname "$0")/.alias"
 source "$(dirname "$0")/.prompt"
 source "$(dirname "$0")/.zsh-git-info"
-source "$(dirname "$0")/.git-prompt.sh"

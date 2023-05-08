@@ -1,4 +1,4 @@
-source ./.git-prompt
-source ./.ps1
-source ./.alias
-source ./.utils
+source "${BASH_SOURCE[0]%/*}/.git-prompt"
+source "${BASH_SOURCE[0]%/*}/.ps1"
+source "${BASH_SOURCE[0]%/*}/.alias"
+source "${BASH_SOURCE[0]%/*}/.utils"

@@ -1,4 +1,8 @@
-source "${BASH_SOURCE[0]%/*}/.git-prompt"
-source "${BASH_SOURCE[0]%/*}/.ps1"
-source "${BASH_SOURCE[0]%/*}/.alias"
-source "${BASH_SOURCE[0]%/*}/.utils"
+current_dir=${BASH_SOURCE%/*}
+parent_dir=$(dirname "$current_dir")
+
+source "$current_dir/.git-prompt"
+source "$current_dir/.ps1"
+source "$current_dir/.bash-alias"
+source "$current_dir/.utils"
+source "$parent_dir/.alias"

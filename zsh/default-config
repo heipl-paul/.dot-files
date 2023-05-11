@@ -1,7 +1,9 @@
-source "$(dirname "$0")/.alias"
-source "$(dirname "$0")/.prompt"
-source "$(dirname "$0")/.zsh-git-info"
-source "$(dirname "$0")/.git-prompt.sh"
-source "$(dirname "$0")/.util"
+current_dir=$(dirname "$0")
+parent_dir=$(dirname "$current_dir")
 
-# test
+source "$current_dir/.zsh-alias"
+source "$current_dir/.prompt"
+source "$current_dir/.zsh-git-info"
+source "$current_dir/.git-prompt.sh"
+source "$current_dir/.util"
+source "$parent_dir/.alias"

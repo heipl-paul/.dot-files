@@ -42,6 +42,9 @@ alias gr="./gradlew"
 alias brew_list="brew leaves | xargs -n1 brew desc"
 alias brew_list_tree="brew deps --tree --installed"
 
+# GPG
+alias gpg_list="gpg --list-secret-keys --keyid-format=long"
+
 
 ############################
 ######## FUNCTIONS #########

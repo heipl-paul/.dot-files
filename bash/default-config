@@ -4,5 +4,6 @@ parent_dir=$(dirname "$current_dir")
 source "$current_dir/.git-prompt"
 source "$current_dir/.ps1"
 source "$current_dir/.bash-alias"
-source "$current_dir/.utils"
+source "$current_dir/.bash-utils"
 source "$parent_dir/.alias"
+source "$parent_dir/.utils"

@@ -1,10 +1,10 @@
 current_dir=$(dirname "$0")
 parent_dir=$(dirname "$current_dir")
 
-source "$current_dir/.zsh-alias"
-source "$current_dir/.prompt"
-source "$current_dir/.zsh-git-info"
+source "$current_dir/.zsh-alias.sh"
+source "$current_dir/.prompt.sh"
+source "$current_dir/.zsh-git-info.sh"
 source "$current_dir/.git-prompt.sh"
-source "$current_dir/.zsh-utils"
-source "$parent_dir/.alias"
-source "$parent_dir/.utils"
+source "$current_dir/.zsh-utils.sh"
+source "$parent_dir/.alias.sh"
+source "$parent_dir/.utils.sh"

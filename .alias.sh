@@ -22,6 +22,9 @@ alias git_prune_local_hard="git fetch --prune && git switch main && git branch |
 alias git_prune_local_master_hard="git fetch --prune && git switch master && git branch | grep -v master | xargs git branch -D && git pull"
 alias git_rebase_master="git fetch origin && git rebase origin/master"
 alias git_rebase_main="git fetch origin && git rebase origin/main"
+alias gpl=git_prune_local
+alias gplh=git_prune_local_hard
+alias gplmh=git_prune_local_master_hard
 
 alias git_reset_hard="git reset --hard && git clean -fxd"
 alias commit="git commit -S -m"

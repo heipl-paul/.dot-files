@@ -27,6 +27,7 @@ alias gplh=git_prune_local_hard
 alias gplmh=git_prune_local_master_hard
 
 alias git_reset_hard="git reset --hard && git clean -fxd"
+alias grh=git_reset_hard
 alias commit="git commit -S -m"
 
 alias gl="git log --pretty=oneline"

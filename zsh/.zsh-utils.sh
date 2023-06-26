@@ -42,3 +42,6 @@ export GRADLE_COMPLETION_EXCLUDE_PATTERN="gradle"
 # export GRADLE_CACHE_TTL_MINUTES=$(expr 1440 \* number_of_days_you_want)
 #
 # By default, the build script cache is invalidated every 3 weeks (30240 minutes).
+#
+# ANOTHER OPTION, BUT I DON'T GET IT:
+# export GRADLE_COMPLETION_UNQUALIFIED_TASKS="true"

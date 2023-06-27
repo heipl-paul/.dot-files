@@ -5,6 +5,7 @@
 autoload -Uz compinit && compinit -i                                # This is zsh auto complete for git
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'        # Match case agnostic
 zstyle ':completion:*' menu select                                  # Tab goes into menu selection instead of autofill
+zstyle ':completion:*' use-cache on                                 # Enable cache (for stuff like gradle auto-complete)
 zmodload zsh/complist
 _comp_options+=(globdots)                                           # Include hidden files
 fpath=(. $fpath)

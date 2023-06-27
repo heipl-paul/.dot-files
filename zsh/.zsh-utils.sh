@@ -14,11 +14,18 @@ export GPG_TTY=$(tty)                       # When I feel bold, replace $(tty) w
 ###### PATH ######
 ##################
 
-# append
+### FPATH
+
+# append _gh to fpath
 fpath+=("$current_dir/_gh")
 
 # export to sub-processes (make it inherited by child processes)
 export FPATH
+
+
+### ZSH $PATH
+
+export PATH=".:$PATH"
 
 
 ######## OTHER EXAMPLE ########

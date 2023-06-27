@@ -38,11 +38,13 @@ alias gs="git status"
 alias gdm="git fetch origin && git diff origin/master"
 alias gdmno="git fetch origin && git diff origin/master --name-only"
 alias gfo="git fetch origin"
-alias grom="git_rebase_master"
+alias grom="git_rebase_main"
+alias gromaster="git_rebase_master"
 
 # GradleW
 alias clean_build="./gradlew clean build"
-alias gr="./gradlew"
+alias gr="gradle"
+alias gw="./gradlew"
 
 # Brew
 alias brew_list="brew leaves | xargs -n1 brew desc"

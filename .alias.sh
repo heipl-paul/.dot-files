@@ -29,14 +29,17 @@ alias gplmh=git_prune_local_master_hard
 alias git_reset_hard="git reset --hard && git clean -fxd"
 alias grh=git_reset_hard
 alias commit="git commit -S -m"
+alias acommit="git add . && git commit -S -m"
 
 alias gl="git log --pretty=oneline"
 alias gb="git branch"
 alias gba="git fetch --prune && git branch -a"
 
 alias gs="git status"
-alias gdm="git fetch origin && git diff origin/master"
-alias gdmno="git fetch origin && git diff origin/master --name-only"
+alias gdm="git fetch origin && git diff origin/main"
+alias gdmno="git fetch origin && git diff origin/main --name-only"
+alias gdmaster="git fetch origin && git diff origin/main"
+alias gdmaster_no="git fetch origin && git diff origin/main --name-only"
 alias gfo="git fetch origin"
 alias grom="git_rebase_main"
 alias gromaster="git_rebase_master"

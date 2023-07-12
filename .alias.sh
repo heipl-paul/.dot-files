@@ -17,9 +17,10 @@ alias dpf=docker_ps_format
 
 
 # Git
-alias git_prune_local="git fetch --prune && git switch main && git branch | grep -v main | xargs git branch -d && git pull"
-alias git_prune_local_hard="git fetch --prune && git switch main && git branch | grep -v main | xargs git branch -D && git pull"
-alias git_prune_local_master_hard="git fetch --prune && git switch master && git branch | grep -v master | xargs git branch -D && git pull"
+alias git_prune_local="git fetch --prune && git switch main && git branch | grep -v main | xargs git branch -D && git pull"
+alias git_prune_local_hard="git_reset_hard && git_prune_local"
+alias git_prune_local_master="git fetch --prune && git switch master && git branch | grep -v master | xargs git branch -D && git pull"
+alias git_prune_local_master_hard="git_reset_hard && git_prune_local_master"
 alias git_rebase_master="git fetch origin && git rebase origin/master"
 alias git_rebase_main="git fetch origin && git rebase origin/main"
 alias gpl=git_prune_local
@@ -55,7 +56,7 @@ alias brew_list_tree="brew deps --tree --installed"
 
 # SDK-Man
 alias jhome="echo ${JAVA_HOME}"
-alias sdk_list_java="sdk list java | grep -e installed -e local"
+alias sdk_list_installed="sdk installed | glow - "
 
 # GPG
 alias gpg_list="gpg --list-secret-keys --keyid-format=long"

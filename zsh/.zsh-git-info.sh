@@ -2,8 +2,12 @@
 ##### ZSH CONFIG #####
 ######################
 
-autoload -Uz compinit && compinit # This is zsh auto complete for git
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+autoload -Uz compinit && compinit -i                                # This is zsh auto complete for git
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'        # Match case agnostic
+zstyle ':completion:*' menu select                                  # Tab goes into menu selection instead of autofill
+zstyle ':completion:*' use-cache on                                 # Enable cache (for stuff like gradle auto-complete)
+zmodload zsh/complist
+_comp_options+=(globdots)                                           # Include hidden files
 fpath=(. $fpath)
 
 # Load Git Branch Info
@@ -11,22 +15,3 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWCOLORHINTS=true
-
-###### NOT CURRENTLY USING ZSH VCS INFO, BELOW IS AN EXAMPLE OF HOW IT WOULD WORK
-
-# autoload -Uz vcs_info
-# precmd () { vcs_info }
-# autoload -U colors && colors 
-# zstyle ':vcs_info:git:*' formats "on branch %{$fg[blue]%}%b%{$reset_color%} %m%u%c%{$reset_color%} "
-
-# Working vcs_info, backup
-# zstyle ':vcs_info:git:*' formats 'on branch %b '
-
-###### end_comment
-
-# Use tab to select completion
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)       # Include hidden files

@@ -12,6 +12,10 @@ alias docker_ps_format="docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.ID}
 alias dpf_portless="docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.ID}}\t{{.Status}}'"
 alias dpf_imageless="docker ps --format 'table {{.Names}}\t{{.ID}}\t{{.Status}}\t{{.Ports}}'"
 alias dpf=docker_ps_format
+alias dpfl=dpf_portless #dpf light
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
+alias dcd="docker compose down"
 # TODO - write function that takes multiple string params, and then builds the above string
 # call it dpf, remove this alias, make the default NAMES ID STATUS (Maybe IMAGE)
 
@@ -33,6 +37,7 @@ alias commit="git commit -S -m"
 alias acommit="git add . && git commit -S -m"
 
 alias gl="git log --pretty=oneline"
+alias glg="git log --oneline --graph --decorate --all"
 alias gb="git branch"
 alias gba="git fetch --prune && git branch -a"
 
@@ -66,6 +71,6 @@ alias gpg_list="gpg --list-secret-keys --keyid-format=long"
 ######## FUNCTIONS #########
 ############################
 
-function docker_stop_all() {
+function docker-stop-all() {
     docker stop `(docker ps -q)`
 }

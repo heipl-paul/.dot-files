@@ -52,3 +52,23 @@ export GRADLE_COMPLETION_EXCLUDE_PATTERN="gradle"
 #
 # ANOTHER OPTION, BUT I DON'T GET IT:
 # export GRADLE_COMPLETION_UNQUALIFIED_TASKS="true"
+
+
+#########################
+### BREW AUTOCOMPLETE ###
+#########################
+
+
+# This must be done before compinit is called. 
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+####

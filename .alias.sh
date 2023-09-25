@@ -52,8 +52,10 @@ alias gromaster="git_rebase_master"
 
 # GradleW
 alias clean_build="./gradlew clean build"
-alias gr="gradle"
-alias gw="./gradlew"
+alias gr="gradle "
+alias gw="./gradlew "
+alias _cb="clean build"
+alias _ca="clean assemble"
 
 # Brew
 alias brew_list="brew leaves | xargs -n1 brew desc"

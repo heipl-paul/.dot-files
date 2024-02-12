@@ -42,6 +42,7 @@ alias gb="git branch"
 alias gba="git fetch --prune && git branch -a"
 
 alias gs="git status"
+alias gsa="git add . && git status"
 alias gdm="git fetch origin && git diff origin/main"
 alias gdmno="git fetch origin && git diff origin/main --name-only"
 alias gdmaster="git fetch origin && git diff origin/main"

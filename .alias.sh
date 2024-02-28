@@ -3,8 +3,8 @@
 ########################
 
 # Unix LifeHacks
-alias ll="ls -lG"
-alias la="ls -laG"
+alias ll="ls -lGh"
+alias la="ls -laGh"
 alias where="which"
 
 # Docker
@@ -24,12 +24,12 @@ alias dcd="docker compose down"
 alias git_prune_local="git fetch --prune && git switch main && git branch | grep -v main | xargs git branch -D && git pull"
 alias git_prune_local_hard="git_reset_hard && git_prune_local"
 alias git_prune_local_master="git fetch --prune && git switch master && git branch | grep -v master | xargs git branch -D && git pull"
-alias git_prune_local_master_hard="git_reset_hard && git_prune_local_master"
+alias git_prune_local_hard_master="git_reset_hard && git_prune_local_master"
 alias git_rebase_master="git fetch origin && git rebase origin/master"
 alias git_rebase_main="git fetch origin && git rebase origin/main"
 alias gpl=git_prune_local
 alias gplh=git_prune_local_hard
-alias gplmh=git_prune_local_master_hard
+alias gplhm=git_prune_local_master_hard
 
 alias git_reset_hard="git reset --hard && git clean -fxd"
 alias grh=git_reset_hard

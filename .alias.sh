@@ -29,7 +29,7 @@ alias git_rebase_master="git fetch origin && git rebase origin/master"
 alias git_rebase_main="git fetch origin && git rebase origin/main"
 alias gpl=git_prune_local
 alias gplh=git_prune_local_hard
-alias gplhm=git_prune_local_master_hard
+alias gplhm=git_prune_local_hard_master
 
 alias git_reset_hard="git reset --hard && git clean -fxd"
 alias grh=git_reset_hard
@@ -37,6 +37,7 @@ alias commit="git commit -S -m"
 alias acommit="git add . && git commit -S -m"
 
 alias gl="git log --pretty=oneline"
+alias gld="git log --decorate --oneline"
 alias glg="git log --oneline --graph --decorate --all"
 alias gb="git branch"
 alias gba="git fetch --prune && git branch -a"
@@ -64,7 +65,8 @@ alias brew_list_tree="brew deps --tree --installed"
 
 # SDK-Man
 alias jhome="echo ${JAVA_HOME}"
-alias sdk_list_installed="sdk installed | glow - "
+alias sdk_list_installed="sdk installed | glow - "              # feeling a bit meh about this one
+alias sdk_list="sdk list java | egrep 'installed|local'"        # as far as I can tell, this does what the missing feature should do
 
 # GPG
 alias gpg_list="gpg --list-secret-keys --keyid-format=long"
